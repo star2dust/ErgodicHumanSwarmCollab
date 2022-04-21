@@ -4,11 +4,9 @@ from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Pose, Pose, Point
 from tf import transformations as trans
 
-
-
 class Visual(object):
 
-    def __init__(self, agent_name, scale-0.1):
+    def __init__(self, agent_name, scale=0.1):
 
         # initialize the markers
         # TODO: figure out how the rover will render (if with full CAD URDF model)
@@ -48,7 +46,7 @@ class Visual(object):
         self._agent_marker.color.b = rgb[2]
 
         self._agent_marker.type = Marker.MESH_RESOURCE
-        self._agent_marker.mesh_resource = "package://decentralized_ergodic/mesh/quad_base.stl"
+        self._agent_marker.mesh_resource = "package://ergodic_humanswarmcollab_sim/mesh/quad_base.stl"
 
         self._path_track.header.frame_id = "world"
         self._path_track.header.stamp = rospy.Time(0)

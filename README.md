@@ -1,11 +1,24 @@
 Ergodic Human-Swarm Collaboration Simulator
 =============================
 
+2021.12.15
+
+Set all create_*.py to be executable. 
+
+Run the following command:
+
+```
+roslaunch ergodic_humanswarmcollab_sim create_scene.launch 
+```
+
+2020.06.04
+
 Decentralized Ergodic Swarm with User Inputs from TanvasTouch Tablet and Task Specifications for object avoidance and convergence.
 
 Create a ros melodic environment with this package in the src folder. 
 First source the ros devel/setup file
 To run use the following commands:
+
 ```
 python create_scene.py num_of_agents
 ```

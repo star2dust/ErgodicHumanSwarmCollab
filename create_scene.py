@@ -10,8 +10,6 @@ parser = argparse.ArgumentParser()
 parser.add_argument('num_agents', type=int, help='agent number', default=1)
 args, unknown = parser.parse_known_args()
 
-
-
 if __name__ == '__main__':
     package = 'ergodic_humanswarmcollab_sim'
     executable = 'create_agent.py'
@@ -20,7 +18,6 @@ if __name__ == '__main__':
     processes   = []
     launch = roslaunch.scriptapi.ROSLaunch()
     launch.start()
-
 
     num_agents = args.num_agents
     agent_names = []

@@ -1,0 +1,8 @@
+<launch>
+    <!-- start roscore (not necessary) -->
+    <master auto="start"/>
+    <!-- run swarm algorithm -->
+    <node pkg="ergodic_humanswarmcollab_sim" name="create_scene" type="create_scene.py" args="6" output="screen"/>
+    <!-- run rviz -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ergodic_humanswarmcollab_sim)/rviz/swarm_paths.rviz" />
+</launch>

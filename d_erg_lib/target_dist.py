@@ -5,7 +5,7 @@ import numpy.random as npr
 from utils import convert_phi2phik
 
 from geometry_msgs.msg import Pose
-from tanvas_comms.msg import input_array
+# from tanvas_comms.msg import input_array
 
 class TargetDist(object):
     '''
@@ -39,7 +39,7 @@ class TargetDist(object):
 
         # Update for Tanvas Inputs
         self._tanvas = False
-        rospy.Subscriber('/input', input_array, self.tanvas_callback)
+        # rospy.Subscriber('/input', input_array, self.tanvas_callback)
 
         
     @property

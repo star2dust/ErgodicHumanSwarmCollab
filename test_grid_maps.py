@@ -43,8 +43,9 @@ if __name__ == '__main__':
 
     gridmap.info.header.frame_id = "world"
     gridmap.info.resolution = 0.2
+    
+    print (gridmap)
 
-    print gridmap
 
     map_pub = rospy.Publisher("grid", GridMap, queue_size=1)
 

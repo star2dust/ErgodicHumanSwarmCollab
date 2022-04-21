@@ -7,7 +7,7 @@ import rospy
 from std_msgs.msg import String, Float32MultiArray
 from target_dist import TargetDist
 
-from decentralized_ergodic.msg import Ck
+from ergodic_humanswarmcollab_sim.msg import Ck
 
 class DErgControl(object):
 

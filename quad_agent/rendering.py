@@ -4,7 +4,7 @@ from visualization_msgs.msg import Marker, MarkerArray
 from geometry_msgs.msg import Pose, Pose, Point
 import tf
 from tf import transformations as trans
-from tanvas_comms.msg import input_array
+# from tanvas_comms.msg import input_array
 
 import seaborn as sns
 sns_palette = sns.color_palette("bright")
@@ -36,7 +36,7 @@ class QuadVisual(object):
         self._marker_pub = rospy.Publisher('agent/visual', MarkerArray, queue_size=1)
         rospy.Subscriber('/ee_loc',Pose,self.tdist_callback)
         rospy.Subscriber('/dd_loc',Pose,self.tdist_callback)
-        rospy.Subscriber('/input',input_array,self.tdist_callback)
+        # rospy.Subscriber('/input',input_array,self.tdist_callback)
         
         self.__build_rendering()
         self.listener = tf.TransformListener()
@@ -95,7 +95,7 @@ class QuadVisual(object):
             agent_marker.color.b = palette[i][2] #rgb[2]
             agent_marker.pose.position.z = np.random.uniform(1.6,4)
             agent_marker.type = Marker.MESH_RESOURCE
-            agent_marker.mesh_resource = "package://decentralized_ergodic/mesh/quad_base.stl"
+            agent_marker.mesh_resource = "package://ergodic_humanswarmcollab_sim/mesh/quad_base.stl"
 
             # Make Trajectory Lines
             line_scale = 0.1
